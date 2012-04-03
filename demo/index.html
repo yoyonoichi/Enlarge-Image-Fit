@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Enlarged Image Fit Plugin</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="../enlargeImgFit.js"></script>
+<script>
+$(document).ready( function() {
+	
+	$.enlargeImgFit({
+		loader:{path:'assets/loader.gif',width:32,height:32},
+		zIndex:300,
+		applyClass:'apply_enlarge_image_fit'
+	});
+	
+});
+</script>
+<style>
+body {
+	position:relative; width:100%; margin:0; text-align:center;
+}
+#wrapper {
+	width:800px; margin:0 auto; text-align:left;	
+}
+#image {
+	border:20px solid #ddd; margin:50px; position:relative; z-index:200;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+    <div class="image"> 
+	    <a href="assets/photo01L.jpg" target="_blank"/><img id="image" class="apply_enlarge_image_fit" src="assets/photo01S.jpg" alt="Photo1" largefile="assets/photo01L.jpg" title="Ajiro Port in Shizuoka"/></a>
+    </div>
+
+    <div class="image"> 
+	    <a href="assets/photo02L.jpg" target="_blank"/><img id="image" class="apply_enlarge_image_fit" src="assets/photo02S.jpg" alt="Photo2" largefile="assets/photo02L.jpg" title="Ojizo-sama at Hase temple in Kamakura"/></a>
+    </div>
+
+    <div class="image"> 
+	    <a href="assets/photo03L.jpg" target="_blank"/><img id="image" class="apply_enlarge_image_fit" src="assets/photo03S.jpg" alt="Photo3" largefile="assets/photo03L.jpg" title="Catch a cat!"/></a>
+    </div>
+    
+</div>
+</body>
+</html>
